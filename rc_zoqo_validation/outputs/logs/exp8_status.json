@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "phase_samples_per_configuration": 1000,
+  "max_second_moment_relative_error": 0.04804191780680389,
+  "max_rms_relative_error": 0.023739184463896557,
+  "dimensionwise_log_log_fits": [
+    {
+      "dimension": 1,
+      "log_log_slope": 0.998729945691564,
+      "intercept": -1.2382063226121989
+    },
+    {
+      "dimension": 16,
+      "log_log_slope": 0.9997009796946196,
+      "intercept": 0.14102925584591908
+    },
+    {
+      "dimension": 64,
+      "log_log_slope": 0.9993238906599373,
+      "intercept": 0.8354099925935853
+    },
+    {
+      "dimension": 256,
+      "log_log_slope": 1.0000209328007024,
+      "intercept": 1.5302685752009328
+    }
+  ]
+}

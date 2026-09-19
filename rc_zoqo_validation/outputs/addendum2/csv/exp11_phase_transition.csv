@@ -1,0 +1,11 @@
+q,k,nu,threshold_3_over_q_plus_2,predicted_direction,observed_direction,match
+128,1,1.0,0.023076923076923078,increasing,increasing,1
+128,4,0.25,0.023076923076923078,increasing,increasing,1
+128,16,0.0625,0.023076923076923078,increasing,increasing,1
+128,64,0.015625,0.023076923076923078,decreasing,decreasing,1
+128,128,0.0078125,0.023076923076923078,decreasing,decreasing,1
+512,1,1.0,0.005836575875486381,increasing,increasing,1
+512,4,0.25,0.005836575875486381,increasing,increasing,1
+512,16,0.0625,0.005836575875486381,increasing,increasing,1
+512,64,0.015625,0.005836575875486381,increasing,increasing,1
+512,512,0.001953125,0.005836575875486381,decreasing,decreasing,1

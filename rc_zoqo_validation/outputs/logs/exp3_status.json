@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "unclipped_sign": 1,
+  "clipped_sign": -1,
+  "quantized_sign": -1,
+  "rounding_count": 2,
+  "clipping_count": 1,
+  "total_quantized_values": 4,
+  "clipping_ratio": 0.25,
+  "mean_rounding_error": 1.1444266422522276e-05,
+  "mean_clipping_distortion": 0.25
+}

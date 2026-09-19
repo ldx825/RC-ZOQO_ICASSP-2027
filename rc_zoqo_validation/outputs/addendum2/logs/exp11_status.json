@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "configurations": 90,
+  "three_sigma_violations": 0,
+  "violation_examples": [],
+  "phase_transition_all_match": true
+}

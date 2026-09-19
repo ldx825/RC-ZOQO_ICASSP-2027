@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "rows": 180,
+  "all_delta_independent": true,
+  "max_relative_error": 4.440892098500626e-16,
+  "special_case_gamma0_isotropic_m1_T1_over_FDelta": 1.7320508075688772,
+  "special_case_sqrt3_gap": 0.0
+}

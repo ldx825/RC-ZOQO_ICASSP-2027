@@ -1,0 +1,8 @@
+seed: 2027
+length: 4096
+bits: [2, 4, 8]
+group_sizes: [4096, 256, 128, 64, 32]
+h: 0.05
+rho: 0.08
+trials: 20
+

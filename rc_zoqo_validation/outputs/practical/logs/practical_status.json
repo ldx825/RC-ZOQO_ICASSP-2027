@@ -1,0 +1,23 @@
+{
+  "checkpoint_test_accuracy": 0.967199981212616,
+  "runs": 30,
+  "delta_4bit": 0.04388371706008911,
+  "delta_8bit": 0.0025813951211817125,
+  "post_floor_query_saving_vs_fixed": 0.8929765886287625,
+  "rc_accuracy_delta_vs_fixed": 0.0026333333333332654,
+  "rc_accuracy_delta_vs_fp": -0.00556666666666672,
+  "audit_accept_rate_4bit": 0.0,
+  "stopped_early_rate_4bit": 1.0,
+  "audit_support_sweep_thresholds": {
+    "16": 0.007703122492039823,
+    "64": 0.03081248996815929,
+    "256": 0.12324995987263716,
+    "1024": 0.49299983949054865
+  },
+  "audit_support_sweep_accepted_mean": {
+    "16": 0.0,
+    "64": 0.0,
+    "256": 0.0,
+    "1024": 0.0
+  }
+}

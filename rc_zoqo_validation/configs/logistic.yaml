@@ -1,0 +1,11 @@
+seed: 2027
+samples: 800
+dimension: 32
+bits: [2, 4, 8]
+iterations: 400
+range: [-2.0, 2.0]
+mu: 0.08
+eta: 0.03
+audit_K: 12
+audit_gamma: 0.001
+

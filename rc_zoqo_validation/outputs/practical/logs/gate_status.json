@@ -1,0 +1,128 @@
+{
+  "checkpoint_accuracy": 0.967199981212616,
+  "entry_iter": 60,
+  "iterations": 200,
+  "head_dimension": 1290,
+  "bits4": {
+    "stop_at_entry_loss": 0.2181526174147924,
+    "forced_loss": 0.1540942837794622,
+    "forced_queries": 398.0,
+    "rc_rows": [
+      {
+        "gamma": 0.0,
+        "support": 16,
+        "loss_end_mean": 0.13111045956611633,
+        "queries_total_mean": 511.6666666666667,
+        "accepted_mean": 140.0,
+        "rejected_mean": 0.0,
+        "stop_iter_mean": null
+      },
+      {
+        "gamma": 0.0,
+        "support": 64,
+        "loss_end_mean": 0.11665746569633484,
+        "queries_total_mean": 663.0,
+        "accepted_mean": 103.66666666666667,
+        "rejected_mean": 0.6666666666666666,
+        "stop_iter_mean": 145.5
+      },
+      {
+        "gamma": 0.05,
+        "support": 16,
+        "loss_end_mean": 0.16951348384221396,
+        "queries_total_mean": 255.66666666666666,
+        "accepted_mean": 21.666666666666668,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 81.66666666666667
+      },
+      {
+        "gamma": 0.05,
+        "support": 64,
+        "loss_end_mean": 0.17748139798641205,
+        "queries_total_mean": 198.33333333333334,
+        "accepted_mean": 6.333333333333333,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 66.33333333333333
+      },
+      {
+        "gamma": 0.25,
+        "support": 16,
+        "loss_end_mean": 0.20090546707312265,
+        "queries_total_mean": 177.66666666666666,
+        "accepted_mean": 2.6666666666666665,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 62.666666666666664
+      },
+      {
+        "gamma": 0.25,
+        "support": 64,
+        "loss_end_mean": 0.2181526174147924,
+        "queries_total_mean": 149.0,
+        "accepted_mean": 0.0,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 60.0
+      }
+    ]
+  },
+  "bits8": {
+    "stop_at_entry_loss": 0.09895152598619461,
+    "forced_loss": 0.09593883653481801,
+    "forced_queries": 402.0,
+    "rc_rows": [
+      {
+        "gamma": 0.0,
+        "support": 16,
+        "loss_end_mean": 0.09774421652158101,
+        "queries_total_mean": 427.6666666666667,
+        "accepted_mean": 140.0,
+        "rejected_mean": 0.0,
+        "stop_iter_mean": null
+      },
+      {
+        "gamma": 0.0,
+        "support": 64,
+        "loss_end_mean": 0.09666339308023453,
+        "queries_total_mean": 448.3333333333333,
+        "accepted_mean": 140.0,
+        "rejected_mean": 0.0,
+        "stop_iter_mean": null
+      },
+      {
+        "gamma": 0.05,
+        "support": 16,
+        "loss_end_mean": 0.09742453694343567,
+        "queries_total_mean": 546.3333333333334,
+        "accepted_mean": 140.0,
+        "rejected_mean": 0.0,
+        "stop_iter_mean": null
+      },
+      {
+        "gamma": 0.05,
+        "support": 64,
+        "loss_end_mean": 0.09591159224510193,
+        "queries_total_mean": 795.6666666666666,
+        "accepted_mean": 122.66666666666667,
+        "rejected_mean": 0.3333333333333333,
+        "stop_iter_mean": 148.0
+      },
+      {
+        "gamma": 0.25,
+        "support": 16,
+        "loss_end_mean": 0.09835647294918697,
+        "queries_total_mean": 385.6666666666667,
+        "accepted_mean": 24.333333333333332,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 84.33333333333333
+      },
+      {
+        "gamma": 0.25,
+        "support": 64,
+        "loss_end_mean": 0.09884840498367946,
+        "queries_total_mean": 169.0,
+        "accepted_mean": 1.3333333333333333,
+        "rejected_mean": 1.0,
+        "stop_iter_mean": 61.333333333333336
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "configurations": 72,
+  "rows": 360,
+  "directions_per_configuration": 50000,
+  "deltas": [
+    0.005,
+    0.01,
+    0.03,
+    0.1,
+    0.3
+  ],
+  "max_success_probability_spread_across_delta": 0.0,
+  "max_normalized_decision_mismatch_rate": 0.0,
+  "max_rms_floor_relative_error": 0.0006239329891501999
+}

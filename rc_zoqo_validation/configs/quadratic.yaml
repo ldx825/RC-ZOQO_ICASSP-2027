@@ -1,0 +1,9 @@
+seeds: 20
+bits: [2, 3, 4, 6, 8]
+dimensions: [1, 16, 64, 256]
+range: [-1.0, 1.0]
+iterations: 700
+tail: 100
+mu_factor: 0.75
+eta_factor: 0.4
+

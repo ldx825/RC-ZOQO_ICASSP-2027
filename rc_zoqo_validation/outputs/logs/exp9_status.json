@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "configurations": 32,
+  "false_stop_rows": 144,
+  "violations_with_3se": 0,
+  "violation_examples": [],
+  "old_expected_forward_bound": 10.666666666666666
+}

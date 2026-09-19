@@ -1,0 +1,6 @@
+seed: 2027
+probe_radius: 1.0
+bits: 16
+random_samples: 50000
+bins: 20
+

@@ -1,0 +1,26 @@
+{
+  "0.0": {
+    "runs": 3,
+    "stopped_early": 3,
+    "accepted_mean": 1.0,
+    "queries_total_mean": 495.6666666666667,
+    "queries_post_floor_mean": 4.666666666666667,
+    "accuracy_end_mean": 0.9522
+  },
+  "0.05": {
+    "runs": 3,
+    "stopped_early": 3,
+    "accepted_mean": 0.0,
+    "queries_total_mean": 523.0,
+    "queries_post_floor_mean": 32.0,
+    "accuracy_end_mean": 0.9622333333333334
+  },
+  "0.25": {
+    "runs": 3,
+    "stopped_early": 3,
+    "accepted_mean": 0.0,
+    "queries_total_mean": 523.0,
+    "queries_post_floor_mean": 32.0,
+    "accuracy_end_mean": 0.9622333333333334
+  }
+}
