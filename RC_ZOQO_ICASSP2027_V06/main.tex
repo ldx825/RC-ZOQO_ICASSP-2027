@@ -251,8 +251,18 @@ To exercise the accepting side we repeat the protocol on the $1{,}290$-parameter
 
 \noindent\textbf{Scope and limitations.} RC-ZOQO diagnoses when a fixed-resolution run has reached the floor of Theorem~\ref{thm:floor}; a failed audit certifies the absence of sampled $\gamma$-sufficient one-grid directions, not local optimality; the certificate needs no smoothness constant.
 
+\enlargethispage{4\baselineskip}
 \section{Conclusion}
-We identified a terminal resolution wall in quantized ZO: once the grid cannot express the intended motion, fixed-bit runs keep paying queries for updates that cannot carry signal. The wall has a computable price (curvature-weighted floor laws, approximately halved by each extra bit) and a testable state: the resolution audit turns the one-grid regime into a decision with an exact finite-sample certificate and a finite accepted-descent bound, stopping an exhausted full model ($89.3$\%/$33.8$\% fewer post-floor/total like-for-like queries, no accuracy loss) and continuing a head-only block, recovering $+1.14$ points a schedule stop discards.
+Schedules cannot tell when a quantized ZO run stops carrying signal:
+once the nominal motion falls below one step, queries keep flowing
+while updates cannot move the model---the terminal resolution wall.
+We price the wall (curvature-weighted floor laws; each bit roughly
+halves the floor) and turn it into a testable state: a resolution
+audit over function values with an exact finite-sample certificate
+and a finite accepted-descent bound. On INT4/INT8 MNIST MLPs it stops
+an exhausted full model ($89.3$\%/$33.8$\% fewer post-floor/total
+queries, no accuracy loss) and continues a head-only block, recovering
+$+1.14$ points a schedule stop discards.
 
 \section{Appendix: Proofs}
 \subsection{Proofs of Lemma~\ref{lem:phase} and Theorem~\ref{thm:floor}}
