@@ -16,8 +16,8 @@ This repository contains the self-contained NumPy/PyTorch validation suite behin
 Quantized zeroth-order (ZO) optimizers keep updating on a discrete grid, but once the nominal probe or update falls below one grid step the run enters a **one-grid regime**: queries keep flowing while the grid cannot express the intended motion. The paper (i) prices that wall and (ii) turns the terminal regime into a black-box statistical decision.
 
 * **Floor laws (Sec. 3).** For quadratics the exact phase-averaged stationarity floor is `F_Δ = Δ‖H‖_F/√12`, so each extra bit approximately halves it; `exp2` recovers this as the slope of `log(final ‖∇f‖)` versus `log Δ`.
-* **Resolution audit (Sec. 4.1, Def. 1).** At a fixed state, draw up to `K` one-grid Rademacher directions with support `m ≤ q` on the non-clipping coordinates and probe symmetrically at magnitude `a`. A direction is accepted when `min(f(x+ar), f(x−ar)) ≤ f₀ − γ a² q`; the audit needs only queried function values (exact chord decomposition, no gradient/Hessian/Lipschitz constant).
-* **Finite-sample certificate (Sec. 4.2, Thm. 2).** If `p` is the probability that a sampled direction is `γ`-useful, the false-stop probability is exactly `(1−p)^K`, so `K` consecutive failures certify `p ≤ 1 − δ^{1/K}` at confidence `1−δ`; accepted steps form a finite sequence (Prop. 2).
+* **Resolution audit (Sec. 4.1, Def. 2).** At a fixed state, draw up to `K` one-grid Rademacher directions with support `m ≤ q` on the non-clipping coordinates and probe symmetrically at magnitude `a`. A direction is accepted when `min(f(x+ar), f(x−ar)) ≤ f₀ − γ a² q`; the audit needs only queried function values (exact chord decomposition, no gradient/Hessian/Lipschitz constant).
+* **Finite-sample certificate (Sec. 4.2, Thm. 2).** If `p` is the probability that a sampled direction is `γ`-useful, the false-stop probability is exactly `(1−p)^K`, so `K` consecutive failures certify `p ≤ 1 − δ^{1/K}` at confidence `1−δ`; accepted steps form a finite sequence (Prop. 1).
 * **Stop / continue validation (Sec. 5).** On INT4/INT8 MNIST MLPs the audit stops a resolution-exhausted full model (89.3% / 33.8% fewer post-floor / total like-for-like queries, no accuracy loss) and *continues* a head-only block, recovering +1.14 points that a fixed schedule discards.
 
 ### 1.2 Where the method lives
@@ -39,9 +39,9 @@ Quantized zeroth-order (ZO) optimizers keep updating on a discrete grid, but onc
 | Sec. 2.1 — quantized ZO updates, one-grid clamping, `Δ_b = D/(2^b−1)` | `src/quantizer.py`, `src/zoqo.py` |
 | Sec. 3 — phase-averaged floor `F_Δ = Δ‖H‖_F/√12` and the bit law | `experiments/exp2_bit_scaling.py` (slope fit via `src/metrics.py::log_log_fit`), `experiments/exp10_curvature_weighted_floor.py` |
 | Sec. 3 / Appendix — range–resolution relation, blockwise feasibility | `experiments/exp4_range_resolution.py`, `experiments/exp6_blockwise.py` |
-| Sec. 4.1, Def. 1 — resolution audit, γ-sufficient decrease | `src/audit.py`, `src/rc_zoqo.py`; end-to-end sweep `experiments/exp9_refined_audit.py`, `exp11_support_size_audit.py` |
+| Sec. 4.1, Def. 2 — resolution audit, γ-sufficient decrease | `src/audit.py`, `src/rc_zoqo.py`; end-to-end sweep `experiments/exp9_refined_audit.py`, `exp11_support_size_audit.py` |
 | Sec. 4.1 — clipping-aware probing (clipping can reverse a comparison) | `src/rc_zoqo.py::clipping_aware_probe()`; counterexample `experiments/exp3_clipping_sign_flip.py` (MUST-PASS) |
-| Sec. 4.2, Thm. 2 / Prop. 2 — `(1−p)^K` false-stop probability, finite accepted-step bound, grid alignment | `experiments/exp5_audit_probability.py` (`table_B_audit.csv`, `exp5_false_stop.csv`), `experiments/exp8_grid_alignment.py`, `exp12_fixed_state_optimal_support.py`, `exp13_bit_invariant_audit.py`, `exp13b_floor_audit_matching.py` |
+| Sec. 4.2, Thm. 2 / Prop. 1 — `(1−p)^K` false-stop probability, finite accepted-step bound, grid alignment | `experiments/exp5_audit_probability.py` (`table_B_audit.csv`, `exp5_false_stop.csv`), `experiments/exp8_grid_alignment.py`, `exp12_fixed_state_optimal_support.py`, `exp13_bit_invariant_audit.py`, `exp13b_floor_audit_matching.py` |
 | Sec. 5.1 — stopping at a resolution floor (INT4 / INT8 MNIST MLP) | `experiments/exp14_mnist_mlp.py` |
 | Sec. 5.2 — continuing despite schedule entry (head-only block) | `experiments/exp15_gate_behavior.py` |
 | Sec. 5 — gate on a LoRA-style adapter block, γ behaviour | `experiments/exp16_lora_gate.py`, `exp16b_lora_gate_e1.py`, `exp17_gamma_full.py` |
