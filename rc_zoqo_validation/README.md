@@ -1,9 +1,9 @@
 # RC-ZOQO theory validation
 
-This is a self-contained Python/NumPy validation suite for the ICASSP 2027 RC-ZOQO work. It deliberately uses deterministic synthetic objectives first; the logistic experiment uses a reproducible synthetic binary dataset and does not access gradients during optimization.
+This is a self-contained Python/NumPy validation suite for the RC-ZOQO paper. It deliberately uses deterministic synthetic objectives first; the logistic experiment uses a reproducible synthetic binary dataset and does not access gradients during optimization.
 
 ```bash
-cd /root/autodl-tmp/EviZO-VP/RC-ZOQO/rc_zoqo_validation
+cd rc_zoqo_validation
 python experiments/run_validation.py
 ```
 
